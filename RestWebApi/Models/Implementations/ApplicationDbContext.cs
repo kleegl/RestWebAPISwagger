@@ -3,9 +3,9 @@ using Models.Implementations;
 
 namespace Models.Implementations
 {
-    public class ApplicationDbContext : DbContext
+    internal class ApplicationDbContext : DbContext
     {
-        DbSet<Order> Orders {get; set; }
+        public DbSet<Order> Orders { get; set; }
 
         private readonly IConfiguration _iConfiguration;
 
