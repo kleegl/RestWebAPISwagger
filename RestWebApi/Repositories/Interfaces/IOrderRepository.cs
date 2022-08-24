@@ -2,7 +2,7 @@ using Models.Implementations;
 
 namespace Repositories.Interfaces
 {
-    internal interface IRepository
+    internal interface IOrderRepository
     {
         public Task<List<Order>> GetOrders();
         

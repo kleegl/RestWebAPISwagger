@@ -4,10 +4,10 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Repositories.Implementations
 {
-    internal class Repository : IRepository
+    internal class OrderRepository : IOrderRepository
     {
         private readonly ApplicationDbContext _context;
-        public Repository(ApplicationDbContext context)
+        public OrderRepository(ApplicationDbContext context)
         {
             _context = context;
         }
@@ -57,7 +57,7 @@ namespace Repositories.Implementations
         {
             try
             {
-                Order findedOrder = GetOrderById(orderNumberToDelete);
+                Order findedOrder = await GetOrderById(orderNumberToDelete);
 
                 if(findedOrder != null)
                 {
