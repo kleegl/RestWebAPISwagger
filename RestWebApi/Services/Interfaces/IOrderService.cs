@@ -1,6 +1,7 @@
 ﻿namespace RestWebApi.Services.Interfaces
 {
-    public interface IService
+    public interface IOrderService
     {
+
     }
 }
